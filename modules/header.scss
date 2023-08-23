@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+.header {
+    position: relative;
+
+    &__wrapper {
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 40px;
+    display: inline-flex;
+    position: absolute;
+    padding-left: 250px;
+    align-items: center;
+    gap: 60px;
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        transition: 0.6s;
+        &:hover {
+            transform: scale(1.1); 
+            cursor: pointer;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        gap: 25px;
+        font-size: 14px;
+        li {
+            transition: 0.3s;
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+            a {
+                transition: 0.5s;
+                text-decoration: none;
+                color: #ffffff;
+                &:hover {
+                    transition: 0.5s;
+                    color: rgb(91, 97, 255);
+                }
+            }
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.header-info {
+    display: block;
+}
+
+.header__phone-ell {
+    height: 40px;
+    &:hover {
+      cursor: pointer;  
+    }
+}
+
+.header__phone-frame {
+    position: relative;
+    left: -28px;
+    height: 16px;
+    transition: 0.2s;
+    &:hover {
+        transition: 0.2s;
+        animation: pulp 3s infinite; 
+      }
+      @keyframes pulp {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg);}
+      }
+}
+
+.header__menu {
+    display: none;
+    height: 40px;
+}
+
+.header__phone-number {
+    color: #ffffff;
+    transition: 0.6s;
+    &:hover {
+        cursor: pointer;
+        color: rgb(91, 97, 255);
+        transform: scale(1.2); 
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .header__wrapper {
+        padding-left: 150px;
+        gap: 30px;
+    }
+    .header__nav  {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header__wrapper {
+        padding-left: 80px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .header__info {
+        display: none;
+    }
+    .header__menu {
+        display: block;
+    }
+    .header__task {
+        display: flex;
+        gap: 10px;
+    }
+}
